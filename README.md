@@ -1,6 +1,7 @@
 This repo contains DeLorean diagnosis and recovery framework code and dataset. 
--/simulator contains DeLorean implementation in ArduPilot SITL.
--/data contains dataset.
+
+-`/simulator` contains DeLorean implementation in ArduPilot SITL.
+-`/data` contains dataset.
 
 ## Running SITL 
 Follow the steps given [here](http://ardupilot.org/dev/docs/copter-sitl-mavproxy-tutorial.html) to setup the build environment. 
@@ -26,12 +27,16 @@ mode auto
 ## Launch Attacks 
 The attacks details are in `AP_InertialNav_NavEKF.cpp` and `AP_AHRS_NavEKF.cpp` files. 
 
-Run the following commands to launch sensor attacks. Follows steps shown [here](https://github.com/KimHyungSub/Robotic-vehicle-software-tutorial/tree/main/ArduPilot) to identify the paremeters for each sensor.  
+Run the following commands to launch sensor attacks. Follows steps shown [here](https://github.com/KimHyungSub/Robotic-vehicle-software-tutorial/tree/main/ArduPilot) to identify the paremeters for each sensor.
+
+GPS Spoofing
 
 ```bash 
 param set SIM_GPS_GLITCH_X 0.01
 param set SIM_GPS_GLITCH_Y 0.01
 ```
+
+Gyroscope Attack
 
 ```bash
 param set SIM_GYR1_RND 3
